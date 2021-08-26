@@ -99,5 +99,7 @@ export async function fetchBlogPost(user, repo, githubToken, blogId) {
     }),
   })
   const blogPostData = await res.json()
+  console.log('this is the blogDAta', blogPostData)
+  console.log('this is the blogDAta data', blogPostData.data)
   return blogPostData.data.repository.issue
 }
