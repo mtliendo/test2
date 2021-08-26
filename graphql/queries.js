@@ -35,7 +35,8 @@ export async function fetchBlogPosts(user, repo, githubToken) {
     }),
   })
   const blogsData = await fetchBlogPostsResponse.json()
-
+  console.log('this is the blogDAta', blogsData)
+  console.log('this is the blogDAta data', blogsData.data)
   return blogsData.data.repository.issues.nodes
 }
 
@@ -60,6 +61,8 @@ export const fetchBlogPostsIDs = async (user, repo, githubToken) => {
   })
 
   const blogPosts = await fetchBlogPostsResponse.json()
+  console.log('this is the blogDAta', blogPosts)
+  console.log('this is the blogDAta data', blogPosts.data)
   return blogPosts.data.repository.issues.nodes
 }
 
